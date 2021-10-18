@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/black">
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_paid_amount"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            android:text=""
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_150sdp"
+    />
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_has_been_paid"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:visibility="gone"
+            android:layout_below="@+id/tv_paid_amount"
+            android:text="@string/hasbeenpaid"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+    />
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+    android:orientation="horizontal"
+                  android:layout_marginHorizontal="@dimen/_20sdp"
+                  android:layout_marginBottom="@dimen/_40sdp"
+                  android:layout_alignParentBottom="true"
+    >
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomButton
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/btn_paid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_15sdp"
+                android:text="@string/paid"
+                android:textAllCaps="false"
+                android:onClick="onClick"
+                android:layout_weight="1"
+                android:background="@color/button_yellow"
+                android:textColor="@color/white"
+        />
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomButton
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/btn_cancelDelivery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_15sdp"
+                android:text="@string/customer_is_not_available"
+                android:textAllCaps="false"
+                android:onClick="onClick"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:background="@color/colorGrey"
+                android:textColor="@color/white"
+
+                android:layout_marginLeft="@dimen/_20sdp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:paddingVertical="@dimen/_5sdp"
+            android:id="@+id/ll_rating"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_height="wrap_content" android:layout_marginBottom="0dp">
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ratenow"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingVertical="@dimen/_3sdp"
+                android:gravity="center"/>
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/et_comment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:hint="@string/add_a_comment"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:background="@drawable/edittext_background"
+               />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBar_amount_paid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:rating="5"
+                android:stepSize="1"
+                android:isIndicator="false"
+                android:theme="@style/CustomRatingBar"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:numStars="5"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomButton
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_rating"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_13sdp"
+                android:text="@string/submitrating"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:background="@color/button_yellow"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_10sdp"/>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomButton
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="@string/skip"
+                    android:id="@+id/btn_skip"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:background="@color/button_yellow"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

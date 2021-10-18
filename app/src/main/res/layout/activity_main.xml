@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+>
+    <FrameLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+    >
+    </FrameLayout>
+
+
+    <LinearLayout
+            android:id="@+id/ll_menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:elevation="@dimen/_4sdp">
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:layout_marginEnd="@dimen/_20sdp"
+                      android:orientation="horizontal">
+
+            <LinearLayout
+                    android:id="@+id/ll_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:padding="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_rating"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_star_gray"/>
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:id="@+id/tv_rating"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_semibold"
+
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/edittextline"
+                        android:text="@string/rating"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/ll_earning"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_2sdp"
+                    android:onClick="onClick"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_earning"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_earning_gray"/>
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView android:id="@+id/tv_earning"
+                                                                            android:layout_width="wrap_content"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:singleLine="true"
+                                                                            android:textAllCaps="true"
+                                                                            android:textSize="10sp"
+                                                                            android:fontFamily="@font/montserrat_semibold"
+
+                                                                            android:textColor="@color/edittextline"
+                                                                            android:text="@string/earning"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rl_home"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:onClick="onClick"
+                android:background="@drawable/ic_seat_belt_not_connected"
+                android:layout_centerHorizontal="true"/>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:layout_marginStart="@dimen/_20sdp"
+                      android:orientation="horizontal">
+
+            <LinearLayout
+                    android:id="@+id/ll_alert"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:padding="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_alerts"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_notification_gray"/>
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:id="@+id/tv_alert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/edittextline"
+                        android:text="@string/alert"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/ll_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:padding="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_account"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_user_icon_with_gray_circle"/>
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+
+                        android:id="@+id/tv_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/edittextline"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="@string/account"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

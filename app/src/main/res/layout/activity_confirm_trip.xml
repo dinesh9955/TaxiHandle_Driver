@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:background="@color/layout_background">
+
+
+
+
+
+    <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/white"
+            android:elevation="@dimen/_10sdp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+
+
+        <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/ic_back_black"/>
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_src"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               app:layout_constraintTop_toBottomOf="@+id/rl_header"
+                android:background="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+               >
+
+            <ImageView
+                    android:id="@+id/iv_src"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_pickup"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:id="@+id/tv_src"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/pickup"
+                    android:singleLine="true"
+                    android:onClick="onClick"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_src"
+                    app:fontName="bold"/>
+
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:id="@+id/tv_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="@string/source_hint"
+                    android:singleLine="true"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_src"
+                    app:layout_constraintStart_toEndOf="@+id/iv_src"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:textSize="@dimen/_12sdp"
+                   />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cl_src"
+                android:padding="@dimen/_7sdp"
+                android:background="@color/white"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                    android:id="@+id/iv_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_drop_off"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:id="@+id/tv_destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/dropoff"
+                    android:singleLine="true"
+                    android:onClick="onClick"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_des"
+                    app:fontName="bold"/>
+
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:id="@+id/tv_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="Enter your Drop-off"
+                    android:singleLine="true"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_des"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_destination"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:id="@+id/tv_userdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="@string/user_details"
+            android:singleLine="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_des"/>
+
+
+
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:id="@+id/ll_details"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toBottomOf="@+id/tv_userdetails"
+              android:background="@color/white"
+              app:layout_constraintStart_toStartOf="parent"
+    android:padding="@dimen/_20sdp"
+                  android:layout_marginTop="@dimen/_10sdp"
+    android:orientation="vertical">
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/et_name"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:hint="@string/name"
+                android:singleLine="true"
+                android:textSize="@dimen/_15sdp"
+
+                android:layout_marginTop="@dimen/_1sdp"
+                android:textColorHint="@color/edittextline"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/edittext_background"
+                android:imeOptions="actionNext"
+
+        />
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/et_email"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_width="match_parent"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:hint="@string/email"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColorHint="@color/edittextline"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/edittext_background"
+                android:imeOptions="actionNext"
+
+        />
+
+
+
+        <RelativeLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+        >
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                    android:fontFamily="@font/montserrat_regular"
+                    android:id="@+id/et_phone_number"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:singleLine="true"
+                    android:hint="@string/phone_number"
+                    android:textSize="@dimen/_15sdp"
+                    android:maxLength="12"
+                    android:textColorHint="@color/edittextline"
+                    android:paddingStart="@dimen/_90sdp"
+                    android:background="@drawable/edittext_background"
+                    android:imeOptions="actionNext"
+
+            />
+            <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="@dimen/_85sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    app:ccp_defaultNameCode="USA"
+                    app:ccp_clickable="true"
+                    app:ccp_showNameCode="false"
+                    app:ccp_textSize="@dimen/_13sdp"
+                    android:layout_centerVertical="true"
+android:layout_alignParentStart="true"
+                    app:ccp_countryPreference="US"
+                    app:ccp_contentColor="@color/black"
+                    android:gravity="center_vertical"/>
+        </RelativeLayout>
+
+
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+    >
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/et_whatsappphone_number"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:ems="10"
+                android:singleLine="true"
+                android:hint="@string/whatsnumber"
+                android:textSize="@dimen/_15sdp"
+                android:textColorHint="@color/edittextline"
+                android:paddingStart="@dimen/_90sdp"
+                android:maxLength="12"
+                android:background="@drawable/edittext_background"
+                android:imeOptions="actionDone"
+
+        />
+        <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp_wn"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center_vertical"
+                app:ccp_defaultNameCode="USA"
+                app:ccp_clickable="true"
+                app:ccp_showNameCode="false"
+                android:layout_alignParentStart="true"
+                app:ccp_countryPreference="US"
+                android:layout_centerVertical="true"
+                app:ccp_textSize="@dimen/_13sdp"
+                app:ccp_contentColor="@color/black"
+                android:gravity="center_vertical"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:id="@+id/tv_createRide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cofirm_ride"
+            android:onClick="onClick"
+            android:layout_margin="@dimen/_20sdp"
+            android:textSize="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/colorDarkRed"
+            android:textColor="@color/white"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/ll_details"
+            android:layout_gravity="bottom"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

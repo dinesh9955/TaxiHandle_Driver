@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+    >
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_190sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/drawable_gradient"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical"
+            android:paddingTop="@dimen/_40sdp">
+
+                <LinearLayout
+                        android:id="@+id/rl_userImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/user_placeholder"
+                android:backgroundTint="@android:color/transparent">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_userImage"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="@dimen/_3sdp"
+                            android:src="@drawable/user_placeholder"
+                            android:background="@drawable/user_placeholder"
+                            app:civ_circle_background_color="@color/colorPrimary"
+                           />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginHorizontal="@dimen/_15sdp">
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="start"
+                        android:textColor="@color/toptextcolor"/>
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/et_first_name"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_width="match_parent"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:ems="10"
+                        android:singleLine="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textColorHint="@color/edittextline"
+                        android:padding="@dimen/_3sdp"
+                        android:imeOptions="actionNext"
+
+                />
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="start"
+                        android:textColor="@color/toptextcolor"/>
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/et_last_name"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_width="match_parent"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:ems="10"
+                        android:singleLine="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textColorHint="@color/edittextline"
+                        android:padding="@dimen/_3sdp"
+                        android:imeOptions="actionNext"
+
+                />
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="start"
+                        android:textColor="@color/toptextcolor"/>
+
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/et_phone_number"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_width="match_parent"
+                        android:inputType="phone|textNoSuggestions"
+                        android:singleLine="true"
+                        android:focusable="false"
+                        android:onClick="onClick"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textColorHint="@color/edittextline"
+                        android:padding="@dimen/_3sdp"
+                        android:imeOptions="actionNext"
+
+                />
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="start"
+                        android:textColor="@color/toptextcolor"/>
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/et_email"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:ems="10"
+                        android:singleLine="true"
+                        android:focusable="false"
+                        android:onClick="onClick"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textColorHint="@color/edittextline"
+                        android:padding="@dimen/_3sdp"
+                        android:imeOptions="actionNext"
+
+                />
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="start"
+                        android:textColor="@color/toptextcolor"/>
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/et_password"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_width="match_parent"
+                        android:inputType="textWebPassword|textNoSuggestions"
+                        android:ems="10"
+                        android:singleLine="true"
+                        android:text="*********"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textColorHint="@color/edittextline"
+                        android:padding="@dimen/_3sdp"
+                        android:onClick="onClick"
+                        android:imeOptions="actionNext"
+
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/layout_common_toolbar_black"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

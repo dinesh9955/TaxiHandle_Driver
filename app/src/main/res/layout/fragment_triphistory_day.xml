@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/layout_common_toolbar"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:background="@color/tilecolor"/>
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:nestedScrollingEnabled="false">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/_2sdp"
+                          android:layout_marginHorizontal="@dimen/_10sdp"
+                          android:padding="@dimen/_2sdp"
+                          android:orientation="horizontal">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:layout_gravity="center"
+                              android:gravity="center"
+                              android:orientation="vertical">
+
+                    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="@string/onlinehours"
+                            android:layout_gravity="center"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableStart="@drawable/ic_watch_black"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:singleLine="true"/>
+
+
+                    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                            android:fontFamily="@font/montserrat_regular"
+                            android:id="@+id/tv_rating_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_22sdp"
+                            android:text="8"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/edittextline"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:singleLine="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:layout_gravity="center"
+                              android:gravity="center"
+                              android:orientation="vertical">
+
+                    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="@string/totaltrips"
+                            android:layout_gravity="center"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableStart="@drawable/ic_car_black_with_mirror"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:singleLine="true"/>
+
+
+                    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                            android:fontFamily="@font/montserrat_regular"
+                            android:id="@+id/tv_cancelled_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_22sdp"
+                            android:text="5"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/edittextline"
+                            android:singleLine="true"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:background="@color/tilecolor">
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Mar 22, 2017"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:background="@drawable/ic_white_circle"
+                            android:textColor="@color/black"
+                            android:text="@string/currencysign"
+                            android:gravity="center_vertical|center_horizontal"/>
+
+                    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_20sdp"
+                            android:textColor="@color/white"
+                            android:text="@string/dummyAmount"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/_2sdp"
+                          android:layout_marginHorizontal="@dimen/_10sdp"
+                          android:paddingVertical="@dimen/_3sdp"
+                          android:orientation="horizontal">
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/total_payment"
+                        android:layout_weight="1"
+                        android:layout_gravity="start|center"
+                        android:gravity="start|center"
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/_2sdp"
+                          android:layout_marginHorizontal="@dimen/_10sdp"
+                          android:paddingVertical="@dimen/_3sdp"
+                          android:orientation="horizontal">
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/ridefare"
+                        android:layout_weight="1"
+                        android:layout_gravity="start|center"
+                        android:gravity="start|center"
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/dummyAmount"
+                        android:layout_gravity="end|center"
+                        android:gravity="end|center"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="@dimen/_5sdp"
+
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/_2sdp"
+                          android:layout_marginHorizontal="@dimen/_10sdp"
+                          android:paddingVertical="@dimen/_3sdp"
+                          android:orientation="horizontal">
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/taxes"
+                        android:layout_weight="1"
+                        android:layout_gravity="start|center"
+                        android:gravity="start|center"
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/dummyAmount"
+                        android:layout_gravity="end|center"
+                        android:gravity="end|center"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/_2sdp"
+                          android:layout_marginHorizontal="@dimen/_10sdp"
+                          android:paddingVertical="@dimen/_3sdp"
+                          android:orientation="horizontal">
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/rounded"
+                        android:layout_weight="1"
+                        android:layout_gravity="start|center"
+                        android:gravity="start|center"
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/dummyAmount"
+                        android:layout_gravity="end|center"
+                        android:gravity="end|center"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/_2sdp"
+                          android:layout_marginHorizontal="@dimen/_10sdp"
+                          android:paddingVertical="@dimen/_3sdp"
+                          android:orientation="horizontal">
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/total_bill"
+                        android:layout_weight="1"
+                        android:layout_gravity="start|center"
+                        android:gravity="start|center"
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="@string/dummyAmount"
+                        android:layout_gravity="end|center"
+                        android:gravity="end|center"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="@string/history"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+
+                    android:layout_gravity="start|center"
+                    android:gravity="start|center"
+                    android:textColor="@color/edittextline"
+                    android:singleLine="true"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_trip_history_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="@font/helvetica_bold"
+                    android:id="@+id/tv_no_data_found"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/nodatafound"/>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomButton
+                    android:fontFamily="@font/helvetica_bold"
+                    android:id="@+id/btn_view_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/edittext_background"
+                    android:text="@string/view_all"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

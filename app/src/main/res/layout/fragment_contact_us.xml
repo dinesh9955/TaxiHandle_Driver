@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/layout_common_toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="#4a4a4a"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_7sdp"
+            android:imeOptions="actionNext"
+            android:background="@drawable/get_message_background"
+            android:hint="@string/title"
+
+    />
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="#4a4a4a"
+            android:singleLine="false"
+            android:text=""
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:gravity="start"
+            android:padding="@dimen/_7sdp"
+            android:imeOptions="actionDone"
+            android:background="@drawable/get_message_background"
+            android:hint="@string/enter_your_description"
+
+    />
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomButton
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:background="@drawable/drawable_gradient"
+            android:text="@string/submit"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:textAllCaps="false"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

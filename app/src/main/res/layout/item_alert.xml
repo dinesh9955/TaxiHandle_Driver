@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingHorizontal="@dimen/_5sdp"
+              android:layout_marginHorizontal="@dimen/_3sdp"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_alert_icon"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_alert_with_gray_circle"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_title_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:text=""
+                android:maxLines="4"/>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:id="@+id/tv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="start"
+                    android:textColor="@color/edittextline"
+                    android:textSize="@dimen/_9sdp"
+                    android:text=""
+                    android:maxLines="4"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_43sdp"
+            android:background="@color/graylight"/>
+
+</LinearLayout>

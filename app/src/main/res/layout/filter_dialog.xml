@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="@dimen/_170sdp"
+              android:layout_height="wrap_content">
+    
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/text_day"
+            android:textSize="@dimen/_15sdp"
+            android:text="@string/daily_trips"
+            android:gravity="center"
+            android:singleLine="true"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/text_weekly"
+            android:textSize="@dimen/_15sdp"
+            android:text="@string/weekly_trips"
+            android:gravity="center"
+            android:singleLine="true"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/text_monthly"
+            android:textSize="@dimen/_15sdp"
+            android:text="@string/monthly_trips"
+            android:gravity="center"
+            android:singleLine="true"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/text_total"
+            android:textSize="@dimen/_15sdp"
+            android:text="@string/total_trips"
+            android:gravity="center"
+            android:singleLine="true"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

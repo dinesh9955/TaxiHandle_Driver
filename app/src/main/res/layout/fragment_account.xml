@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+   >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_190sdp"
+                    android:background="@drawable/drawable_gradient"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_40sdp"
+                   >
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:backgroundTint="@android:color/transparent"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_userImage"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+
+                        android:src="@drawable/user_placeholder"
+                        android:background="@drawable/user_placeholder"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="@dimen/_3sdp"
+                      />
+                </LinearLayout>
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:singleLine="true"
+                        android:padding="@dimen/_2sdp"
+                />
+
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/helvetica_bold"
+                        android:id="@+id/tv_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp"
+                        android:singleLine="true"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onClick"
+                        android:text="@string/edit"
+                        android:paddingHorizontal="@dimen/_3sdp"
+                />
+
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_profile_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:id="@+id/tv_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_16sdp"
+                    android:text="@string/logout"
+                    android:onClick="onClick"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:drawableStart="@drawable/ic_logout_gray"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/layout_common_toolbar_black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

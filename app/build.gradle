@@ -1,0 +1,166 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.rydz.driver"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 4
+        versionName "1.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '28.0.3'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+
+}
+allprojects {
+    repositories {
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    // CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    //Sdp depedency for screen size
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    //google maps depedency
+/*
+    implementation 'com.google.android.gms:play-services:12.0.1'
+*/
+    implementation 'com.google.android.gms:play-services-maps:12.0.1'
+    implementation 'com.google.android.gms:play-services-location:12.0.1'
+    implementation 'com.google.maps:google-maps-services:0.2.5'
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
+    implementation 'com.google.android.libraries.places:places:2.0.0'
+
+
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+
+    def daggerVer = 2.13 // or latest version
+    implementation "com.google.dagger:dagger:$daggerVer"
+    implementation "com.google.dagger:dagger-android-support:$daggerVer"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVer"
+    kapt "com.google.dagger:dagger-compiler:$daggerVer"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.13"
+
+    /* dagger dependency for DI*/
+    //implementation "com.google.dagger:dagger:2.13"
+//    implementation "com.google.dagger:dagger:2.27"
+//    annotationProcessor "com.google.dagger:dagger-compiler:2.13"
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+    implementation 'javax.inject:javax.inject:1'
+    /*Retrofit lib*/
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    /*RxJava lib*/
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+
+
+    implementation 'io.reactivex:rxjava:1.3.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    implementation 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
+    /* LiveData lib*/
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.0.0'
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.0.0'
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+  //  implementation 'com.crashlytics.sdk.android:crashlytics:2.9.8'
+
+//rxjava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
+
+    implementation('io.socket:socket.io-client:1.0.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
+    //Validators
+    implementation "com.rengwuxian.materialedittext:library:$material_edittext_version"
+
+    // circular progressbar
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+
+    // Glide Depedency
+
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+
+    //apache lang 3
+    implementation 'org.apache.commons:commons-lang3:3.6'
+
+    //country code picker
+    implementation 'com.hbb20:ccp:2.2.4'
+
+    //Circular ImageView
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    //Sinch verification is
+    implementation(name: 'sinch-android-verification-1.5.1', ext: 'aar')
+
+    //Direction
+    implementation 'org.jetbrains.anko:anko-sdk15:0.8.2'
+    implementation 'com.beust:klaxon:0.30'
+  //  implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.jsibbold:zoomage:1.3.1'
+
+}
+
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+}

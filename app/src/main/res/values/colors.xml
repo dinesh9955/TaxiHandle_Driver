@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/_b78830</color>
+    <color name="colorAccent">@color/_b78830</color>
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="colorError">#e53935</color>
+    <color name="colorSeparator">#5d7791</color>
+<color name="colorGrey">#212121</color>
+    <color name="colorDarkRed">#DFA601</color>
+    <color name="black">#000000</color>
+    <color name="edittextline">#9b9b9b</color>
+    <color name="layout_background">#f2f2f2</color>
+    <color name="texthighlightcolor">#0284fe</color>
+    <color name="tilecolor">#5387f9</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="bottom_shadow">#34b2b2b2</color>
+    <color name="graylight">#e5e5e5</color>
+    <color name="toptextcolor">#4a4a4a</color>
+    <color name="yellow">#FFE63C</color>
+    <color name="red">#910029</color>
+    <color name="green">#68C305</color>
+    <color name="send_message_color">#007aff</color>
+    <color name="get_message_color">#e9e8ee</color>
+
+    <color name="button_red">#cd1100</color>
+    <color name="button_yellow">#d1b708</color>
+    <color name="button_green">#008b00</color>
+    <color name="text_green">#008b00</color>
+    <color name="image_background_color">#f3f3f3</color>
+    <color name="contact_us_background">#f4f4f4</color>
+    <color name="_b78830">#b78830</color>
+    <color name="_010101">#010101</color>
+    <color name="_e4c755">#e4c755</color>
+    <color name="_819595">#819595</color>
+</resources>

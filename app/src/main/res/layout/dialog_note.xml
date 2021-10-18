@@ -1,0 +1,45 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:minWidth="@dimen/_200sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/switch_background"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_10sdp">
+    <TextView
+            android:id="@+id/tv_noteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_14sdp"
+            android:text="@string/note"/>
+
+    <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_10sdp"
+    />
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:id="@+id/tv_okay"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/ok"
+            android:textColor="@color/_b78830"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"/>
+
+
+</LinearLayout>

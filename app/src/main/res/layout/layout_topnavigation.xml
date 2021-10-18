@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_top_navigation"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:visibility="gone"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+
+    >
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:id="@+id/tv_enroute"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_2sdp"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="center"
+                android:text="@string/en_route"
+                android:textColor="@color/white"
+                android:layout_height="@dimen/_42sdp"/>
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:id="@+id/tv_cancelRide"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_width="wrap_content"
+                android:padding="@dimen/_2sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Cancel Ride"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+        />
+    </RelativeLayout>
+
+
+    <LinearLayout
+            android:id="@+id/ll_navigate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:onClick="onClick"
+            >
+
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:padding="@dimen/_2sdp"
+                android:textSize="@dimen/_8sdp"
+                android:drawableTop="@drawable/ic_navigation_blue"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:text="@string/navigation"
+                android:layout_height="wrap_content"
+        />
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_user_address"
+                android:layout_width="wrap_content"
+                android:maxLines="3"
+                android:padding="@dimen/_2sdp"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+        />
+
+    </LinearLayout>
+
+
+</LinearLayout>

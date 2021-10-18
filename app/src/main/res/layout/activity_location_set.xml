@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layout_background"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="56dp">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_headermain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+            <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:onClick="onClick"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_back_black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:id="@+id/tv_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:onClick="onClick"
+                    android:text="@string/done"
+                    android:visibility="gone"
+                    android:textColor="@color/graylight"
+                    android:textSize="@dimen/_12sdp"
+                    android:enabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:background="@color/white"
+                    android:padding="@dimen/_1sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_back">
+
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomAutoCompleteTextView
+                        android:id="@+id/edt_destination"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1.8"
+                        android:background="@color/image_background_color"
+                        android:ellipsize="end"
+                        android:hint="@string/destination_hint"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:visibility="visible"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontName="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp">
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

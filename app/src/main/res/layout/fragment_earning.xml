@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include layout="@layout/layout_common_toolbar"/>
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/estimated_payouts"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+              android:fontFamily="@font/montserrat_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/currencysign"
+
+                android:textColor="@color/black"
+                android:textSize="27.8sp"
+               />
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_total_earning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="27.8sp"
+                android:textColor="@color/black"
+                android:text="0"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+        />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_37sdp"
+                android:id="@+id/rl_common"
+                android:elevation="@dimen/_1sdp"
+                android:background="@color/graylight"
+                android:padding="@dimen/_5sdp"
+        >
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="@font/montserrat_medium"
+                    android:id="@+id/tv_filter_title"
+                    android:text="All Trips"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+
+            />
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="@font/montserrat_bold"
+                    android:id="@+id/tv_filter"
+                    android:text="Daily"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:singleLine="true"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/ccp_down_arrow"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:onClick="myClickMethod"
+
+            />
+
+
+        </RelativeLayout>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@color/bottom_shadow"
+            android:paddingVertical="@dimen/_2sdp"
+            android:visibility="gone"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical">
+
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/edittextline"
+                android:padding="@dimen/_2sdp"
+                android:text="22 March"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:drawableStart="@drawable/ic_left_double_arrow_gray"
+                android:drawablePadding="@dimen/_8sdp"
+                android:layout_gravity="end|center_vertical"
+                android:gravity="end|center_vertical"
+        />
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/edittextline"
+                android:padding="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/to"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="start|center_vertical"
+        />
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/edittextline"
+                android:padding="@dimen/_2sdp"
+                android:text="28 March"
+                android:drawableEnd="@drawable/ic_right_double_arrow_gray"
+                android:drawablePadding="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="start|center_vertical"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_trip_history"
+            android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+    android:orientation="horizontal"
+            android:visibility="gone"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:layout_marginHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_5sdp"
+    android:onClick="onClick">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="start|center_vertical"
+                app:srcCompat="@drawable/ic_timer_gray"
+                android:padding="@dimen/_2sdp"
+                android:layout_height="@dimen/_22sdp"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+        android:paddingVertical="@dimen/_5sdp"
+        android:orientation="vertical">
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/edittextline"
+                    android:text="@string/triphistory"
+                    android:singleLine="true"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_gravity="start|center_vertical"
+                    android:gravity="start|center_vertical"
+            />
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_9sdp"
+                    android:textColor="@color/edittextline"
+                    android:text="@string/lasttrip"
+                    android:singleLine="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_gravity="start|center_vertical"
+                    android:gravity="start|center_vertical"
+            />
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/tv_last_trip_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_9sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/edittextline"
+                        android:text="33.34"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="start|center_vertical"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="start|center_vertical"
+                app:srcCompat="@drawable/ic_right_arrow_gray"
+                android:padding="@dimen/_4sdp"
+                android:layout_height="@dimen/_22sdp"/>
+    </LinearLayout>
+        
+    <LinearLayout
+            android:id="@+id/ll_invite"
+            android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+            android:visibility="gone"
+                  android:layout_marginHorizontal="@dimen/_10sdp"
+                  android:paddingVertical="@dimen/_5sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="start|center_vertical"
+                app:srcCompat="@drawable/ic_share_gray"
+                android:padding="@dimen/_2sdp"
+                android:layout_height="@dimen/_22sdp"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:paddingVertical="@dimen/_5sdp"
+                      android:orientation="vertical">
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/edittextline"
+                    android:text="@string/invite"
+                    android:singleLine="true"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_gravity="start|center_vertical"
+                    android:gravity="start|center_vertical"
+            />
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/edittextline"
+                        android:singleLine="true"
+                        android:text="@string/earn_an_extra"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                />
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/tv_invite_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/edittextline"
+                        android:text="150"
+                        android:singleLine="true"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="start|center_vertical"
+                />
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/edittextline"
+                        android:text="@string/foreveryfriend"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:singleLine="true"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="start|center_vertical"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="start|center_vertical"
+                app:srcCompat="@drawable/ic_right_arrow_gray"
+                android:padding="@dimen/_4sdp"
+                android:layout_height="@dimen/_22sdp"/>
+    </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_trip_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:visibility="gone"
+
+        />
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/helvetica_bold"
+                android:id="@+id/tv_no_data_found"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_150sdp"
+                android:visibility="visible"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/nodatafound"/>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

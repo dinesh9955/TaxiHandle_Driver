@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/topLayout"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context=".view.activity.RegisterDetailActivity"
+        android:background="@color/colorPrimary">
+    <include layout="@layout/layout_common_toolbar"/>
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+        android:padding="@dimen/_2sdp">
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="montserrat_regular.ttf"
+                    android:text="@string/driver_licence_verified"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                     android:textSize="12sp"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:textColor="@color/black"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_driver_licence"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:onClick="onClick"
+                    android:maxHeight="@dimen/_110sdp"
+                    android:layout_width="wrap_content"
+                    android:minWidth="@dimen/_110sdp"
+                    android:minHeight="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_image_backgroung"/>
+
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="montserrat_regular.ttf"
+                    android:text="@string/clear_picture_of_your_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:textColor="@color/black"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_numberPlate"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:onClick="onClick"
+                    android:maxHeight="@dimen/_110sdp"
+                    android:layout_width="wrap_content"
+                    android:minWidth="@dimen/_110sdp"
+                    android:minHeight="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_image_backgroung"/>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="montserrat_regular.ttf"
+                    android:text="@string/t_zini"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:textColor="@color/black"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_tzini"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:onClick="onClick"
+                    android:maxHeight="@dimen/_110sdp"
+                    android:layout_width="wrap_content"
+                    android:minWidth="@dimen/_110sdp"
+                    android:minHeight="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_image_backgroung"/>
+
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:fontFamily="montserrat_regular.ttf"
+                    android:text="@string/car_licence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:textColor="@color/black"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_car_licence"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:onClick="onClick"
+                    android:maxHeight="@dimen/_110sdp"
+                    android:layout_width="wrap_content"
+                    android:minWidth="@dimen/_110sdp"
+                    android:minHeight="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_image_backgroung"/>
+
+
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomButton
+                    android:fontFamily="montserrat_regular.ttf"
+                    android:id="@+id/btn_reset"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:ems="10"
+                    android:textSize="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:background="@drawable/ic_next_arrow_fab"
+                    android:padding="@dimen/_8sdp"
+                    android:onClick="onClick"
+                    android:textColor="@color/black"
+                    android:layout_gravity="end"
+                    android:textAllCaps="false"
+                    android:singleLine="true"
+                    android:layout_marginBottom="@dimen/_40sdp"
+            />
+
+
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "35643580920",
+    "firebase_url": "https://rydz-288312.firebaseio.com",
+    "project_id": "rydz-288312",
+    "storage_bucket": "rydz-288312.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35643580920:android:89ff628116e16aeacaf60d",
+        "android_client_info": {
+          "package_name": "cabuser.com.rydz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35643580920-hqr7sb6jd3hguad5mgjpjdflfhamnvvb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbbpabKJq70fs-2ZaArkTKyCphgZAHgCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35643580920-hqr7sb6jd3hguad5mgjpjdflfhamnvvb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35643580920:android:ea3195a9e6098500caf60d",
+        "android_client_info": {
+          "package_name": "com.rydz.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35643580920-hqr7sb6jd3hguad5mgjpjdflfhamnvvb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbbpabKJq70fs-2ZaArkTKyCphgZAHgCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35643580920-hqr7sb6jd3hguad5mgjpjdflfhamnvvb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/menu_daily"
+            android:title="@string/daily_trips"
+            android:orderInCategory="1"
+            app:showAsAction="never" />
+
+    <item
+            android:id="@+id/menu_weekly"
+            android:title="@string/weekly_trips"
+            android:orderInCategory="2"
+            app:showAsAction="never" />
+
+    <item
+            android:id="@+id/menu_monthly"
+            android:title="@string/monthly_trips"
+            android:orderInCategory="3"
+            app:showAsAction="never" />
+
+    <item
+            android:id="@+id/menu_total"
+            android:title="@string/total_trips"
+            android:orderInCategory="4"
+            app:showAsAction="never" />
+</menu>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@android:color/transparent"
+        android:id="@+id/rl_common"
+>
+    <ImageView
+            android:id="@+id/iv_back_common_black"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_22sdp"
+            app:srcCompat="@drawable/ic_back_white"
+            android:layout_alignParentStart="true"
+            android:onClick="onClick"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+    />
+    <ImageView
+            android:id="@+id/iv_end_common_black"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_22sdp"
+            app:srcCompat="@drawable/ic_home_white"
+            android:layout_alignParentEnd="true"
+            android:onClick="onClick"
+            android:visibility="gone"
+            android:padding="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+
+    />
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_medium"
+            android:id="@+id/tv_title_common_black"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/_13sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+    />
+</RelativeLayout>

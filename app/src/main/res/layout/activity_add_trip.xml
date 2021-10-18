@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/topLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <ImageView
+            android:id="@+id/iv_loc_pin"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/blue_pin"
+            android:visibility="gone"/>
+
+
+    <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/white"
+            android:elevation="@dimen/_5sdp">
+
+
+        <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/ic_back_black"/>
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/drawable_roundedwhite"
+            android:elevation="@dimen/_10sdp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_src"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="@dimen/_7sdp"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                    android:id="@+id/iv_src"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_pickup"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:id="@+id/tv_src"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/pickup"
+                    android:singleLine="true"
+                    android:onClick="onClick"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_src"
+                    app:fontName="bold"/>
+
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:id="@+id/tv_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="@string/source_hint"
+                    android:singleLine="true"
+                    android:onClick="onClick"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_src"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_src"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/graylight"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_80sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                android:padding="@dimen/_7sdp">
+
+            <ImageView
+                    android:id="@+id/iv_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_drop_off"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:id="@+id/tv_destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/dropoff"
+                    android:singleLine="true"
+                    android:onClick="onClick"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_des"
+                    app:fontName="bold"/>
+
+
+            <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                    android:id="@+id/tv_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="Enter your Drop-off"
+                    android:singleLine="true"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:onClick="onClick"
+                    app:layout_constraintStart_toEndOf="@+id/iv_des"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_destination"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cofirm"
+            android:onClick="onClick"
+            android:layout_margin="@dimen/_20sdp"
+            android:textSize="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp"
+            android:gravity="center"
+            android:background="@drawable/drawable_gradient"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="@dimen/_250sdp"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+android:padding="@dimen/_10sdp">
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_15sdp"
+            android:text="Issue with delivery "
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"/>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical">
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_notAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_notAvailable"
+                android:textSize="@dimen/_12sdp"
+                android:text="Customer is not available to receive package"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical">
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_returnedpackage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_returnedpackage"
+                android:textSize="@dimen/_12sdp"
+                android:text="Customer has returned the package"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical">
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_paymentNotDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_paymentNotDone"
+                android:textSize="@dimen/_12sdp"
+                android:text="Package is delievred but payment is not done"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+    android:layout_margin="@dimen/_10sdp"/>
+
+
+</LinearLayout>

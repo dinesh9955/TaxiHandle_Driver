@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="@dimen/_5sdp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_userImage"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center"
+            app:civ_border_width="@dimen/_2sdp"
+            app:civ_border_color="@color/white"
+            android:src="@drawable/ic_yellow_profile"/>
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_regular"
+            android:text=""
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_3sdp"
+            android:textColor="@color/black"/>
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/your_profile_under_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_3sdp"
+            android:textColor="@color/black"/>
+
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomButton
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/btn_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:background="@drawable/drawable_gradient"
+            android:text="@string/ok_thanks"
+            android:padding="@dimen/_8sdp"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:singleLine="true"/>
+
+</LinearLayout>

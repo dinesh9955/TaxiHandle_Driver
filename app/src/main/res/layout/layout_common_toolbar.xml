@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/_2sdp">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:id="@+id/rl_common"
+            android:background="@color/white"
+    >
+        <ImageView
+                android:id="@+id/iv_back_common"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_22sdp"
+                app:srcCompat="@drawable/ic_home_black"
+                android:layout_alignParentStart="true"
+                android:onClick="onClick"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                android:layout_centerVertical="true"
+
+        />
+        <ImageView
+                android:id="@+id/iv_end_common"
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_37sdp"
+                app:srcCompat="@drawable/ic_home_black"
+                android:layout_alignParentEnd="true"
+                android:onClick="onClick"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+        />
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:id="@+id/tv_title_common"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"
+
+                android:layout_marginHorizontal="@dimen/_50sdp"
+        />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

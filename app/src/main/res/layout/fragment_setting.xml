@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/layout_common_toolbar"/>
+
+    <LinearLayout
+            android:id="@+id/ll_faq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingVertical="@dimen/_6sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_faq"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:padding="@dimen/_6sdp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_setting_navigation_icon"/>
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_faq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="@dimen/_13sdp"
+                android:singleLine="true"
+                android:text="@string/faq"
+                android:maxLines="1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_right_arrow1"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_right_arrow_gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingVertical="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_privacy_policy"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:padding="@dimen/_6sdp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_notification_ring"/>
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="@dimen/_13sdp"
+                android:singleLine="true"
+                android:text="@string/privacy_policy"
+                android:maxLines="1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_right_arrow_privacy_policy"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_right_arrow_gray"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/ll_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingVertical="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_about_us"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:padding="@dimen/_6sdp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_notification_ring"/>
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="@dimen/_13sdp"
+                android:singleLine="true"
+                android:text="@string/about_us"
+                android:maxLines="1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_right_about_us"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_right_arrow_gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingVertical="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_notification_ring_icon"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:padding="@dimen/_6sdp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_notification_ring"/>
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_contact_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="@dimen/_13sdp"
+                android:singleLine="true"
+                android:text="@string/contact_us"
+                android:maxLines="1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_right_arrow2"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_right_arrow_gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingVertical="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_terms"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:padding="@dimen/_6sdp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_notification_ring"/>
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="@dimen/_13sdp"
+                android:singleLine="true"
+                android:text="@string/terms_condition"
+                android:maxLines="1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_right_arrow_terms"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_right_arrow_gray"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingVertical="@dimen/_6sdp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_driver_shortcut_icon"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:padding="@dimen/_6sdp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_driver_shortcut"/>
+
+        <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tv_driver_shortcut_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="@dimen/_13sdp"
+                android:singleLine="true"
+                android:text="@string/driver_shortcut"
+                android:maxLines="1"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sh_driver_short_cut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+        />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

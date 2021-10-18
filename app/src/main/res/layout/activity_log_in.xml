@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/topLayout"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_height="match_parent" tools:context=".view.activity.LogInActivity"
+        android:background="@color/colorPrimary">
+    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/pleasesignin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="15sp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                    android:id="@+id/ll_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/email_addres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_120sdp"
+                        android:gravity="start"
+                        android:textColor="@color/black"/>
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/et_email"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:ems="10"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textColorHint="@color/black"
+                        android:padding="@dimen/_3sdp"
+                        android:text=""
+                        android:maxLength="80"
+                        android:textColor="@color/black"
+                        android:imeOptions="actionNext"
+                        android:backgroundTint="@color/black"/>
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="start"
+                        android:textColor="@color/black"/>
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/et_password"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_width="match_parent"
+                        android:inputType="textWebPassword|textNoSuggestions"
+                        android:ems="10"
+                        android:textSize="@dimen/_15sdp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textColorHint="@color/black"
+                        android:maxLength="20"
+
+                        android:padding="@dimen/_3sdp"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/ll_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:layout_marginTop="@dimen/_120sdp"
+                        android:gravity="start"
+                        android:textColor="@color/black"/>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+                    <com.hbb20.CountryCodePicker
+                            android:id="@+id/ccp"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            app:ccp_defaultNameCode="USA"
+                            app:ccp_clickable="true"
+                            app:ccp_showNameCode="false"
+                            app:ccp_textSize="14sp"
+                            app:ccp_countryPreference="US"
+                            app:ccp_contentColor="@color/black"
+                            android:gravity="center_vertical"/>
+                    <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                            android:fontFamily="@font/montserrat_regular"
+                            android:id="@+id/et_phone"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_width="match_parent"
+                            android:inputType="phone|textNoSuggestions"
+                            android:ems="10"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:textSize="14sp"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:textColorHint="@color/black"
+                            android:background="@null"
+                            android:padding="@dimen/_3sdp"
+                            android:text=""
+                            android:maxLength="13"
+                            android:textColor="@color/black"
+                            android:imeOptions="actionNext"/>
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@color/black"/>
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="start"
+                        android:textColor="@color/black"/>
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomEditText
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/et_Phone_password"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_width="match_parent"
+                        android:inputType="textWebPassword|textNoSuggestions"
+                        android:ems="10"
+                        android:textSize="14sp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@null"
+                        android:textColorHint="@color/black"
+                        android:padding="@dimen/_3sdp"
+                        android:imeOptions="actionDone"
+                        android:maxLength="20"
+                        android:textColor="@color/black"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@color/black"/>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="@dimen/_20sdp">
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/tv_forgot"
+                        android:text="@string/forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:singleLine="true"
+                        android:onClick="onClick"
+                        android:textColor="@color/black"/>
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomButton
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/btn_login"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:textSize="@dimen/_18sdp"
+                        android:background="@drawable/ic_next_arrow_fab"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:onClick="onClick"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="@dimen/_40sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="@dimen/_1sdp"
+                      android:background="@color/black"
+                      android:layout_weight="1"/>
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/tv_or"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:padding="@dimen/_4sdp"
+                        android:text="@string/or"/>
+
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="@dimen/_1sdp"
+                      android:background="@color/black"
+                      android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:gravity="center"
+                          android:visibility="visible"
+                          android:layout_marginTop="@dimen/_15sdp"
+                          android:orientation="horizontal">
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@string/helveticabold"
+                        android:id="@+id/tv_login_with"
+                        android:text="@string/loginwithemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:singleLine="true"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:gravity="center"
+                          android:id="@+id/ll_signup"
+                          android:visibility="visible"
+                          android:layout_marginTop="@dimen/_15sdp"
+                          android:orientation="horizontal">
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/tv_dontregister"
+                        android:text="@string/dontregister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:singleLine="true"/>
+
+                <com.rydz.driver.CommonUtils.CustomTextUtils.CustomTextView
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/tv_register"
+                        android:text="@string/signup_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:singleLine="true"
+                        android:onClick="onClick"
+                        android:textColor="@color/black"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+        <!--</layout>-->
