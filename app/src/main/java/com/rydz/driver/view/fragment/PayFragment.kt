@@ -58,6 +58,7 @@ class PayFragment : BaseFragment(), SocketListener {
 
     companion object {
        lateinit var paymentFragment: PayFragment
+       var TAG = "PayFragment"
     }
 
 
@@ -69,6 +70,8 @@ class PayFragment : BaseFragment(), SocketListener {
         AppSocketListener.getInstance().setActiveSocketListener(this)
         AppSocketListener.getInstance().restartSocket()
         paymentFragment = this
+
+        Log.e(TAG, "PayFrmagcc")
 
 
         (context!!.applicationContext as App).getAppComponent().doInjection(this)
@@ -130,14 +133,16 @@ class PayFragment : BaseFragment(), SocketListener {
                 bookingId = driverRideStatus!!.id
                 if (driverRideStatus!!.userId != null) {
                     user_id = driverRideStatus!!.userId.id
-                    tv_paid_amount.text = getString(R.string.currencysign) + " " + String.format(
-                        "%1$.2f",
-                        driverRideStatus!!.fare
-                    ).replace(",", ".").toDouble()
+//                    tv_paid_amount.text = getString(R.string.currencysign) + " " + String.format(
+//                        "%1$.2f",
+//                        driverRideStatus!!.fare
+//                    ).replace(",", ".").toDouble()
+                    tv_paid_amount.text = getString(R.string.currencysign) + " " + String.format("%1$.2f", driverRideStatus!!.subtotalFare).replace(",", ".").toDouble()
                 } else {
                     user_id = ""
                     if (driverRideStatus!!.bookingType.equals("1")) {
-                        tv_paid_amount.text = getString(R.string.currencysign) + " " + String.format("%1$.2f", driverRideStatus!!.itemAmount).replace(",", ".").toDouble()
+//                        tv_paid_amount.text = getString(R.string.currencysign) + " " + String.format("%1$.2f", driverRideStatus!!.itemAmount).replace(",", ".").toDouble()
+                        tv_paid_amount.text = getString(R.string.currencysign) + " " + String.format("%1$.2f", driverRideStatus!!.subtotalFare).replace(",", ".").toDouble()
                     }
                     else
                     {

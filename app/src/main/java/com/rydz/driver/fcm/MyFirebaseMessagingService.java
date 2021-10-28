@@ -1,5 +1,6 @@
 package com.rydz.driver.fcm;
 
+import android.annotation.SuppressLint;
 import android.app.*;
 import android.content.ComponentName;
 import android.content.Context;
@@ -142,11 +143,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     public Boolean isLogin() {
-
-
         return getMyPreferences().getStringValue(AppConstants.USER_ID) != null && !getMyPreferences().getStringValue(AppConstants.USER_ID).isEmpty();
     }
 
+    @SuppressLint("WrongConstant")
     private void displayCustomNotificationForOrders(JSONObject jsonObject) {
         Log.e("DATA : ", jsonObject + "");
         try {
